@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="logindataDataSet7" targetNamespace="http://tempuri.org/logindataDataSet7.xsd" xmlns:mstns="http://tempuri.org/logindataDataSet7.xsd" xmlns="http://tempuri.org/logindataDataSet7.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="logindataConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="logindataConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Inspira.Properties.Settings.GlobalReference.Default.logindataConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="stockTableAdapter" GeneratorDataComponentClassName="stockTableAdapter" Name="stock" UserDataComponentName="stockTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="logindataConnectionString (Settings)" DbObjectName="logindata.stock" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `productID`, `DrugName`, `batchNo` FROM `stock`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="productID" DataSetColumn="productID" />
+              <Mapping SourceColumn="DrugName" DataSetColumn="DrugName" />
+              <Mapping SourceColumn="batchNo" DataSetColumn="batchNo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="logindataDataSet7" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="logindataDataSet7" msprop:Generator_UserDSName="logindataDataSet7">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="stock" msprop:Generator_TableClassName="stockDataTable" msprop:Generator_TableVarName="tablestock" msprop:Generator_TablePropName="stock" msprop:Generator_RowDeletingName="stockRowDeleting" msprop:Generator_RowChangingName="stockRowChanging" msprop:Generator_RowEvHandlerName="stockRowChangeEventHandler" msprop:Generator_RowDeletedName="stockRowDeleted" msprop:Generator_UserTableName="stock" msprop:Generator_RowChangedName="stockRowChanged" msprop:Generator_RowEvArgName="stockRowChangeEvent" msprop:Generator_RowClassName="stockRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="productID" msprop:Generator_ColumnVarNameInTable="columnproductID" msprop:Generator_ColumnPropNameInRow="productID" msprop:Generator_ColumnPropNameInTable="productIDColumn" msprop:Generator_UserColumnName="productID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DrugName" msprop:Generator_ColumnVarNameInTable="columnDrugName" msprop:Generator_ColumnPropNameInRow="DrugName" msprop:Generator_ColumnPropNameInTable="DrugNameColumn" msprop:Generator_UserColumnName="DrugName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="batchNo" msprop:Generator_ColumnVarNameInTable="columnbatchNo" msprop:Generator_ColumnPropNameInRow="batchNo" msprop:Generator_ColumnPropNameInTable="batchNoColumn" msprop:Generator_UserColumnName="batchNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
